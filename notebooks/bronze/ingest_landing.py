@@ -8,16 +8,21 @@
 
 from pyspark.sql import functions as F
 
-dbutils.widgets.text("catalog", "main")
-dbutils.widgets.text("schema", "airline_medallion_dev")
-dbutils.widgets.text("landing_path", "/Volumes/main/airline_medallion_dev/landing")
+# Free Edition defaults: catalog is "workspace"; schema/volume are created below.
+dbutils.widgets.text("catalog", "workspace")
+dbutils.widgets.text("schema", "airline_medallion")
+dbutils.widgets.text("volume", "landing")
 
 catalog = dbutils.widgets.get("catalog")
 schema = dbutils.widgets.get("schema")
-landing_path = dbutils.widgets.get("landing_path")
+volume = dbutils.widgets.get("volume")
+landing_path = f"/Volumes/{catalog}/{schema}/{volume}"
 
-spark.sql(f"CREATE CATALOG IF NOT EXISTS {catalog}")
+# On Free Edition you cannot create catalogs, but you can create schemas and
+# volumes inside the built-in "workspace" catalog.
 spark.sql(f"CREATE SCHEMA IF NOT EXISTS {catalog}.{schema}")
+spark.sql(f"CREATE VOLUME IF NOT EXISTS {catalog}.{schema}.{volume}")
+print(f"Upload your CSVs to: {landing_path}")
 
 # COMMAND ----------
 

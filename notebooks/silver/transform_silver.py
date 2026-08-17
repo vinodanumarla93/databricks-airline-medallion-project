@@ -8,8 +8,8 @@
 
 from pyspark.sql import functions as F
 
-dbutils.widgets.text("catalog", "main")
-dbutils.widgets.text("schema", "airline_medallion_dev")
+dbutils.widgets.text("catalog", "workspace")
+dbutils.widgets.text("schema", "airline_medallion")
 catalog = dbutils.widgets.get("catalog")
 schema = dbutils.widgets.get("schema")
 

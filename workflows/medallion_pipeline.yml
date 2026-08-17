@@ -11,6 +11,7 @@ resources:
             base_parameters:
               catalog: ${var.catalog}
               schema: ${var.schema}
+              volume: ${var.volume}
 
         - task_key: silver_transform
           depends_on:

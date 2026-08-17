@@ -1,4 +1,5 @@
 -- Gold layer analytics queries for Databricks SQL dashboards.
+-- Free Edition defaults: catalog = workspace, schema = airline_medallion.
 -- Replace ${catalog} and ${schema} or set them as query parameters.
 
 -- Top routes by revenue

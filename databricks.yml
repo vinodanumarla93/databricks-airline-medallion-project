@@ -9,25 +9,20 @@ include:
 # Reusable variables
 variables:
   catalog:
-    description: Unity Catalog to use for tables
-    default: main
+    description: Unity Catalog to use for tables (Free Edition uses "workspace")
+    default: workspace
   schema:
     description: Schema/database for the project tables
     default: airline_medallion
+  volume:
+    description: Volume name for the landing zone
+    default: landing
 
 targets:
+  # Free Edition serverless workspace.
   dev:
     mode: development
     default: true
     workspace:
-      # Replace with your Databricks workspace URL
-      host: https://adb-0000000000000000.0.azuredatabricks.net
-    variables:
-      schema: airline_medallion_dev
-
-  prod:
-    mode: production
-    workspace:
-      host: https://adb-0000000000000000.0.azuredatabricks.net
-    variables:
-      schema: airline_medallion
+      # Replace with your Databricks Free Edition workspace URL
+      host: https://dbc-00000000-0000.cloud.databricks.com
