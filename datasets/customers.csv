@@ -1,0 +1,7 @@
+customer_id,first_name,last_name,email,state,created_ts
+C001,Priya,Sharma,priya.sharma@example.com,TX,2024-01-05T09:12:00
+C002,James,Miller,james.miller@example.com,CA,2024-01-06T14:30:00
+C003,Aisha,Khan,aisha.khan@example.com,NY,2024-01-07T11:45:00
+C004,Diego,Ramirez,diego.ramirez@example.com,FL,2024-01-08T08:05:00
+C005,Mei,Chen,mei.chen@example.com,WA,2024-01-09T16:20:00
+C006,Liam,OBrien,,IL,2024-01-10T10:00:00

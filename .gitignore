@@ -1,0 +1,20 @@
+# Databricks / Python runtime artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.databricks/
+.databricks-login.json
+
+# Local data / runtime output (keep folder, ignore contents)
+data/*
+!data/.gitkeep
+
+# Delta / Spark local runs
+spark-warehouse/
+metastore_db/
+derby.log
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,7 @@
+flight_id,origin,destination,airline,base_fare
+F100,DAL,LAX,SkyWest,220.00
+F101,LAX,JFK,BlueJet,410.50
+F102,JFK,MIA,SunAir,180.75
+F103,MIA,SEA,SkyWest,395.00
+F104,SEA,ORD,BlueJet,260.25
+F105,ORD,DAL,SunAir,150.00

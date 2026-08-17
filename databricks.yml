@@ -1,0 +1,33 @@
+# Databricks Asset Bundle configuration
+# Docs: https://docs.databricks.com/dev-tools/bundles/index.html
+bundle:
+  name: airline-medallion
+
+include:
+  - workflows/*.yml
+
+# Reusable variables
+variables:
+  catalog:
+    description: Unity Catalog to use for tables
+    default: main
+  schema:
+    description: Schema/database for the project tables
+    default: airline_medallion
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      # Replace with your Databricks workspace URL
+      host: https://adb-0000000000000000.0.azuredatabricks.net
+    variables:
+      schema: airline_medallion_dev
+
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-0000000000000000.0.azuredatabricks.net
+    variables:
+      schema: airline_medallion
