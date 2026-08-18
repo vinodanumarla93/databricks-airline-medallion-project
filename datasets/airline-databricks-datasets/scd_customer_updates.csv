@@ -1,0 +1,3 @@
+customer_id,name,email,state,customer_type,last_updated
+101,John Smith,john@gmail.com,FL,PLATINUM,2025-02-01
+104,Alice Johnson,alice@gmail.com,TX,GOLD,2025-02-01

@@ -1,0 +1,11 @@
+customer_id,name,email,state,customer_type,last_updated
+101,John Smith,john@gmail.com,TX,GOLD,2025-01-01
+102,Mary Jones,mary@gmail.com,CA,SILVER,2025-01-01
+103,David Lee,david@gmail.com,FL,BRONZE,2025-01-01
+104,Alice Brown,alice@gmail.com,WA,GOLD,2025-01-01
+105,Bob Miller,bob@gmail.com,TX,SILVER,2025-01-01
+106,Chris King,chris@gmail.com,NV,BRONZE,2025-01-01
+107,Sarah Hall,sarah@gmail.com,AZ,GOLD,2025-01-01
+108,Tom White,tom@gmail.com,CO,SILVER,2025-01-01
+109,Linda Green,linda@gmail.com,TX,BRONZE,2025-01-01
+110,James Adams,james@gmail.com,CA,GOLD,2025-01-01

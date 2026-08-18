@@ -1,0 +1,3 @@
+booking_id,customer_id,flight_id,amount,booking_date
+B015,111,F100,700,2025-01-12
+B016,112,F103,350,2025-01-12

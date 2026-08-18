@@ -23,6 +23,8 @@ customers = spark.table(tbl("silver", "customers"))
 
 # MAGIC %md ## Route revenue
 
+# COMMAND ----------
+
 route_revenue = (
     bookings.join(flights, "flight_id")
     .groupBy("origin", "destination", "airline")
@@ -38,6 +40,8 @@ route_revenue.write.mode("overwrite").saveAsTable(tbl("gold", "route_revenue"))
 
 # MAGIC %md ## Customer revenue
 
+# COMMAND ----------
+
 customer_revenue = (
     bookings.groupBy("customer_id")
     .agg(F.sum("amount").alias("total_revenue"), F.count("*").alias("booking_count"))
@@ -48,6 +52,8 @@ customer_revenue.write.mode("overwrite").saveAsTable(tbl("gold", "customer_reven
 # COMMAND ----------
 
 # MAGIC %md ## State revenue
+
+# COMMAND ----------
 
 state_revenue = (
     customer_revenue.groupBy("state")

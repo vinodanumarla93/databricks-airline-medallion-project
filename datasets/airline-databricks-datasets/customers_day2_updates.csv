@@ -1,0 +1,5 @@
+customer_id,name,email,state,customer_type,last_updated
+101,John Smith,john@gmail.com,TX,PLATINUM,2025-01-05
+104,Alice Johnson,alice@gmail.com,WA,GOLD,2025-01-05
+111,Michael Clark,michael@gmail.com,FL,SILVER,2025-01-05
+112,Emma Davis,emma@gmail.com,TX,BRONZE,2025-01-05

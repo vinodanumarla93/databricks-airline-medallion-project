@@ -20,6 +20,8 @@ def tbl(layer, name):
 
 # MAGIC %md ## Customers - dedupe and validate email presence
 
+# COMMAND ----------
+
 bronze_customers = spark.table(tbl("bronze", "customers"))
 valid_customers = bronze_customers.filter(F.col("email").isNotNull() & (F.trim(F.col("email")) != ""))
 bad_customers = bronze_customers.filter(F.col("email").isNull() | (F.trim(F.col("email")) == "")) \
@@ -32,12 +34,16 @@ bad_customers.write.mode("overwrite").saveAsTable(tbl("quarantine", "customers")
 
 # MAGIC %md ## Flights - straightforward conform
 
+# COMMAND ----------
+
 spark.table(tbl("bronze", "flights")).dropDuplicates(["flight_id"]) \
     .write.mode("overwrite").saveAsTable(tbl("silver", "flights"))
 
 # COMMAND ----------
 
 # MAGIC %md ## Bookings - validate seats and referential integrity
+
+# COMMAND ----------
 
 bronze_bookings = spark.table(tbl("bronze", "bookings"))
 silver_customers = spark.table(tbl("silver", "customers")).select("customer_id").distinct()
