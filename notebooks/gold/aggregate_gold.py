@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "5"
+# ///
 # MAGIC %md
 # MAGIC # Gold Layer - Business Aggregates
 # MAGIC Produces analytics tables: route revenue, customer revenue, state revenue.

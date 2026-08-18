@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "5"
+# ///
 # MAGIC %md
 # MAGIC # Silver Layer - Clean, Validate, Conform
 # MAGIC Applies data quality rules, routes bad records to quarantine tables,
